@@ -1,0 +1,22 @@
+AI CHATBOT WITH NLP
+
+code:# Install necessary libraries
+!pip install nltk
+
+# Import libraries
+import nltk
+from nltk.chat.util import Chat, reflections
+
+nltk.download('punkt')
+
+# Define a simple set of patterns and responses
+pairs = [
+    ["hi|hello", ["Hello!", "Hi there!"]],
+    ["how are you", ["I'm fine, thank you.", "Doing well, how about you?"]],
+    ["(.*) your name", ["I'm an AI chatbot.", "You can call me Chatbot."]],
+    ["bye|goodbye", ["Goodbye!", "See you later!"]]
+]
+
+# Create and start the chatbot
+chatbot = Chat(pairs, reflections)
+chatbot.converse()
